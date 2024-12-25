@@ -36,12 +36,16 @@ namespace ScraperSceleton.Utils
             return categoriesList;
         }
 
-        public Dictionary<string, Dictionary<int, double>> GetAllBooksFromSelectedCategory(string catURL) 
+        public Dictionary<string, Dictionary<int, double>> GetAllBooksFromSelectedCategory(string catURL, Dictionary<string, Dictionary<int, double>>  booksInCat) 
         {
-            //read the selected category page
+           
             HtmlDocument page = ReadPage(catURL);
             var books = page.DocumentNode.SelectNodes("//article[contains(@class, 'product_pod')]");// <article class="product_pod">
-            Dictionary<string, Dictionary<int, double>> booksInCat = new Dictionary<string, Dictionary<int, double>>();
+            if (booksInCat == null)
+            {
+                booksInCat = new Dictionary<string, Dictionary<int, double>>();
+            }
+
             
             if (books != null)
             {
@@ -50,16 +54,40 @@ namespace ScraperSceleton.Utils
                     Dictionary<int, double> ratePriceDict = new Dictionary<int, double>();
                     string title = _attr.GetBookTitle(book);
                     double price = _attr.GetBookPrice(book);
-                    var rate = _attr.GetBookRating(book);                    
-                   
-                    ratePriceDict.Add(rate, price);
-                    booksInCat.Add(title, ratePriceDict);
+                    var rate = _attr.GetBookRating(book);
+
+                    if (!booksInCat.ContainsKey(title)) 
+                    {
+                        ratePriceDict.Add(rate, price);
+                        booksInCat.Add(title, ratePriceDict);
+                    }
 
                 }
 
             }
+            if (IsMorePages(page)) 
+            {
+                catURL = NextPageUrl(page, catURL);
+                GetAllBooksFromSelectedCategory(catURL, booksInCat);
 
+            }
             return booksInCat;
         }
+
+        public bool IsMorePages(HtmlDocument page) 
+        {
+            var nextPageNode = page.DocumentNode.SelectSingleNode("//li[contains(@class, 'next')]/a");
+
+            return nextPageNode != null;
+        }
+
+        public string NextPageUrl(HtmlDocument page, string baseCatURL) 
+        {
+            var nextPageNode = page.DocumentNode.SelectSingleNode("//li[contains(@class, 'next')]/a");
+            var relativeHref = nextPageNode.GetAttributeValue("href", "");
+            var nextPageUrl = new Uri(new Uri(baseCatURL), relativeHref).ToString();
+            return nextPageUrl;
+            
+        } 
     }
 }

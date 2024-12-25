@@ -11,6 +11,10 @@
             {
                 catURL = categoriesList[category];
             }
+            else
+            {
+                catURL = "https://books.toscrape.com/"; //to read all books
+            }
 
             return catURL;
         }
