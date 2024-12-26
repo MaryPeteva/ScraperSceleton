@@ -1,9 +1,12 @@
 ﻿using HtmlAgilityPack;
 namespace ScraperSceleton.Utils
 {
+    //class main purpose to read the provided page
     public class Reader
     {
         private BookAttr _attr = new BookAttr();
+
+        // reads the web page and returns HTML doc
         public HtmlDocument ReadPage(string url) 
         {
             var httpClient = new HttpClient();
@@ -13,6 +16,7 @@ namespace ScraperSceleton.Utils
             return pageHTML;
         }
 
+        // gets the categories and returns a dict with category name and URL
         public Dictionary<string, string> GetCategories(HtmlDocument page) 
         {
             var categories = page.DocumentNode.SelectSingleNode("//*[@id=\"default\"]/div/div/div/aside/div[2]/ul/li/ul");
@@ -36,6 +40,7 @@ namespace ScraperSceleton.Utils
             return categoriesList;
         }
 
+        //returns all books with title, price and rating from selected category
         public Dictionary<string, Dictionary<int, double>> GetAllBooksFromSelectedCategory(string catURL, Dictionary<string, Dictionary<int, double>>  booksInCat) 
         {
            
@@ -74,6 +79,7 @@ namespace ScraperSceleton.Utils
             return booksInCat;
         }
 
+        //checks if there is a next page element 
         public bool IsMorePages(HtmlDocument page) 
         {
             var nextPageNode = page.DocumentNode.SelectSingleNode("//li[contains(@class, 'next')]/a");
@@ -81,6 +87,7 @@ namespace ScraperSceleton.Utils
             return nextPageNode != null;
         }
 
+        //returns the URL for the next page
         public string NextPageUrl(HtmlDocument page, string baseCatURL) 
         {
             var nextPageNode = page.DocumentNode.SelectSingleNode("//li[contains(@class, 'next')]/a");

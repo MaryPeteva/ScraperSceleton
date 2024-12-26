@@ -2,6 +2,7 @@
 {
     public class Select
     {
+        //returns the URL of selected category if no valid category is selected returns the main URL and the extraction of books will be for the whole site not just one category
         public string SelectCategory(Dictionary<string, string> categoriesList) 
         {
             Console.WriteLine("Select a category:");
