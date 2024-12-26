@@ -1,52 +1,60 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ScraperSceleton.Models;
 
 namespace ScraperSceleton.Utils
 {
     public class Filter
     {
-        public Dictionary<string, Dictionary<int, double>> OrderByPriceAsc(Dictionary<string, Dictionary<int, double>> books) 
+        public List<Book> OrderByPriceAsc(List<Book> books) 
         {
-            var sorted = books.OrderBy(book => book.Value.First().Value)
-                         .ToDictionary(book => book.Key, book => book.Value);
+            List<Book> sorted = books.OrderBy(book => book.Price)
+                                     .ThenBy(book => book.Title)
+                                     .ThenBy(book => book.Rate)
+                                     .ToList();
             return sorted;
         }
 
-        public Dictionary<string, Dictionary<int, double>> OrderByPriceDesc(Dictionary<string, Dictionary<int, double>> books)
+        public List<Book> OrderByPriceDesc(List<Book> books)
         {
-            var sorted = books.OrderByDescending(book => book.Value.First().Value)
-                         .ToDictionary(book => book.Key, book => book.Value);
+            var sorted = books.OrderByDescending(book => book.Price)
+                              .ThenBy(book => book.Title)
+                              .ThenBy(book => book.Rate)
+                              .ToList();
             return sorted;
         }
 
-        public Dictionary<string, Dictionary<int, double>> OrderByTitleAsc(Dictionary<string, Dictionary<int, double>> books) 
+        public List<Book> OrderByTitleAsc(List<Book> books) 
         {
-            var sorted = books.OrderBy(book => book.Key)
-                 .ToDictionary(book => book.Key, book => book.Value);
+            var sorted = books.OrderBy(book => book.Title)
+                              .ThenBy(book => book.Rate)
+                              .ThenBy(book => book.Price)
+                              .ToList();
             return sorted;
         }
 
-        public Dictionary<string, Dictionary<int, double>> OrderByTitleDesc(Dictionary<string, Dictionary<int, double>> books)
+        public List<Book> OrderByTitleDesc(List<Book> books)
         {
-            var sorted = books.OrderByDescending(book => book.Key)
-                 .ToDictionary(book => book.Key, book => book.Value);
+            var sorted = books.OrderBy(book => book.Title)
+                              .ThenBy(book => book.Rate)
+                              .ThenBy(book => book.Price)
+                              .ToList();
             return sorted;
         }
 
-        public Dictionary<string, Dictionary<int, double>> OrderByRatingAsc(Dictionary<string, Dictionary<int, double>> books) 
+        public List<Book> OrderByRatingAsc(List<Book> books) 
         {
-            var sortedByRating = books.OrderBy(book => book.Value.First().Key)
-                          .ToDictionary(book => book.Key, book => book.Value);
+            var sortedByRating = books.OrderBy(book => book.Rate)
+                              .ThenBy(book => book.Title)
+                              .ThenBy(book => book.Price)
+                              .ToList();
             return sortedByRating;
         }
 
-        public Dictionary<string, Dictionary<int, double>> OrderByRatingDesc(Dictionary<string, Dictionary<int, double>> books)
+        public List<Book> OrderByRatingDesc(List<Book> books)
         {
-            var sortedByRating = books.OrderByDescending(book => book.Value.First().Key)
-                          .ToDictionary(book => book.Key, book => book.Value);
+            var sortedByRating = books.OrderBy(book => book.Rate)
+                              .ThenBy(book => book.Title)
+                              .ThenBy(book => book.Price)
+                              .ToList();
             return sortedByRating;
         }
 

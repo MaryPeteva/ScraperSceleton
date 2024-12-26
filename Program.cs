@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using ScraperSceleton.Models;
 using ScraperSceleton.Utils;
 public class Program
 {
@@ -15,42 +16,30 @@ public class Program
         Select _selector = new Select();
         string selectedCatURL = _selector.SelectCategory(categories);
         
-        Dictionary<string, Dictionary<int, double>> books = new Dictionary<string, Dictionary<int, double>>();
+        List<Book> books = new List<Book>();
         books = _reader.GetAllBooksFromSelectedCategory(selectedCatURL, books);
         var sortedByPrice = _filter.OrderByPriceDesc(books);
         Console.WriteLine("Books sorted by price");
         foreach (var book in sortedByPrice) 
         {
-            Console.WriteLine($"{book.Key},");
-            foreach (var v in book.Value) 
-            {
-                Console.Write($" {v} ");
-            }
-            Console.WriteLine();
+            Console.WriteLine($"{book},");
+            
         }
 
         var sortedByTitle = _filter.OrderByTitleDesc(books);
         Console.WriteLine("Books sorted by title");
         foreach (var book in sortedByTitle)
         {
-            Console.WriteLine($"{book.Key},");
-            foreach (var v in book.Value)
-            {
-                Console.Write($" {v} ");
-            }
-            Console.WriteLine();
+            Console.WriteLine($"{book},");
+            
         }
 
         var sortedByRate = _filter.OrderByRatingDesc(books);
         Console.WriteLine("Books Sorted by rate");
         foreach (var book in sortedByRate)
         {
-            Console.WriteLine($"{book.Key},");
-            foreach (var v in book.Value)
-            {
-                Console.Write($" {v} ");
-            }
-            Console.WriteLine();
+            Console.WriteLine($"{book}");
+            
         }
 
 

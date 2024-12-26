@@ -1,4 +1,6 @@
 ﻿using HtmlAgilityPack;
+using ScraperSceleton.Models;
+using System.Linq;
 namespace ScraperSceleton.Utils
 {
     //class main purpose to read the provided page
@@ -41,14 +43,14 @@ namespace ScraperSceleton.Utils
         }
 
         //returns all books with title, price and rating from selected category
-        public Dictionary<string, Dictionary<int, double>> GetAllBooksFromSelectedCategory(string catURL, Dictionary<string, Dictionary<int, double>>  booksInCat) 
+        public List<Book> GetAllBooksFromSelectedCategory(string catURL, List<Book> booksInCat) 
         {
            
             HtmlDocument page = ReadPage(catURL);
             var books = page.DocumentNode.SelectNodes("//article[contains(@class, 'product_pod')]");// <article class="product_pod">
             if (booksInCat == null)
             {
-                booksInCat = new Dictionary<string, Dictionary<int, double>>();
+                booksInCat = new List<Book>();
             }
 
             
@@ -56,15 +58,14 @@ namespace ScraperSceleton.Utils
             {
                 foreach (var book in books)
                 {
-                    Dictionary<int, double> ratePriceDict = new Dictionary<int, double>();
-                    string title = _attr.GetBookTitle(book);
-                    double price = _attr.GetBookPrice(book);
-                    var rate = _attr.GetBookRating(book);
+                    Book currentBook = new Book();
+                    currentBook.Title = _attr.GetBookTitle(book);
+                    currentBook.Price = _attr.GetBookPrice(book);
+                    currentBook.Rate = _attr.GetBookRating(book);
 
-                    if (!booksInCat.ContainsKey(title)) 
+                    if (!booksInCat.Contains(currentBook))
                     {
-                        ratePriceDict.Add(rate, price);
-                        booksInCat.Add(title, ratePriceDict);
+                        booksInCat.Add(currentBook);
                     }
 
                 }
