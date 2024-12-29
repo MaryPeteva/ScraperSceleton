@@ -8,12 +8,12 @@ public class Program
     {
         Reader _reader = new Reader();
         Filter _filter = new Filter();
+        Select _selector = new Select();
         string url = "https://books.toscrape.com/";
         //Console.WriteLine("Please provide a URL to read:");//might end up with a user input far page but it's too early to say
         //url = Console.ReadLine();
         HtmlDocument page = _reader.ReadPage(url);
         Dictionary<string, string> categories = _reader.GetCategories(page);
-        Select _selector = new Select();
         string selectedCatURL = _selector.SelectCategory(categories);
         
         List<Book> books = new List<Book>();

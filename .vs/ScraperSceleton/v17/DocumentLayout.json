@@ -3,28 +3,32 @@
   "WorkspaceRootPath": "H:\\ScraperSceleton\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|h:\\scrapersceleton\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|h:\\scrapersceleton\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|solutionrelative:models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|H:\\ScraperSceleton\\utils\\filter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|solutionrelative:utils\\filter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|h:\\scrapersceleton\\utils\\bookattr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|solutionrelative:utils\\bookattr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.Core.csproj|h:\\scrapersceleton\\utils\\bookattr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.Core.csproj|solutionrelative:utils\\bookattr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|H:\\ScraperSceleton\\utils\\reader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|solutionrelative:utils\\reader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|h:\\scrapersceleton\\utils\\search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|H:\\ScraperSceleton\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|H:\\ScraperSceleton\\utils\\filter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|solutionrelative:utils\\filter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|H:\\ScraperSceleton\\utils\\search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|solutionrelative:utils\\search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|H:\\ScraperSceleton\\utils\\select.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|solutionrelative:utils\\select.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|H:\\ScraperSceleton\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39B11802-7E5E-488A-873C-2124AB6CF1D1}|ScraperSceleton.csproj|solutionrelative:models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,33 +58,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
+              "Title": "Select.cs",
+              "DocumentMoniker": "H:\\ScraperSceleton\\Utils\\Select.cs",
+              "RelativeDocumentMoniker": "Utils\\Select.cs",
+              "ToolTip": "H:\\ScraperSceleton\\Utils\\Select.cs",
+              "RelativeToolTip": "Utils\\Select.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T18:06:52.489Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "BookAttr.cs",
               "DocumentMoniker": "H:\\ScraperSceleton\\Utils\\BookAttr.cs",
               "RelativeDocumentMoniker": "Utils\\BookAttr.cs",
               "ToolTip": "H:\\ScraperSceleton\\Utils\\BookAttr.cs",
               "RelativeToolTip": "Utils\\BookAttr.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "ViewState": "AQIAADUAAAAAAAAAAAApwEYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-26T17:33:58.557Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Book.cs",
               "DocumentMoniker": "H:\\ScraperSceleton\\Models\\Book.cs",
               "RelativeDocumentMoniker": "Models\\Book.cs",
               "ToolTip": "H:\\ScraperSceleton\\Models\\Book.cs",
               "RelativeToolTip": "Models\\Book.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA1AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T17:17:07.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T17:17:07.522Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "Search.cs",
               "DocumentMoniker": "H:\\ScraperSceleton\\Utils\\Search.cs",
               "RelativeDocumentMoniker": "Utils\\Search.cs",
@@ -88,12 +103,11 @@
               "RelativeToolTip": "Utils\\Search.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T17:13:22.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T17:13:22.021Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Filter.cs",
               "DocumentMoniker": "H:\\ScraperSceleton\\Utils\\Filter.cs",
               "RelativeDocumentMoniker": "Utils\\Filter.cs",
@@ -101,34 +115,31 @@
               "RelativeToolTip": "Utils\\Filter.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T15:24:45.79Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T15:24:45.79Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Reader.cs",
               "DocumentMoniker": "H:\\ScraperSceleton\\Utils\\Reader.cs",
               "RelativeDocumentMoniker": "Utils\\Reader.cs",
               "ToolTip": "H:\\ScraperSceleton\\Utils\\Reader.cs",
               "RelativeToolTip": "Utils\\Reader.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMAAAAyAAAA",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAwwEEAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T15:16:01.11Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T15:16:01.11Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "H:\\ScraperSceleton\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "H:\\ScraperSceleton\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAoAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T15:10:36.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T15:10:36.891Z"
             }
           ]
         }

@@ -13,6 +13,8 @@ namespace ScraperSceleton.Models
         public double Price {get; set;}
         public string Description { get; set; }
 
+        public string BookURL { get; set; }
+
         public override string ToString() 
         {
             return $"Title: {Title}\nPrice: {Price}\nRating: {Rate}\n";

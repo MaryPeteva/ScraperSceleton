@@ -62,6 +62,8 @@ namespace ScraperSceleton.Utils
                     currentBook.Title = _attr.GetBookTitle(book);
                     currentBook.Price = _attr.GetBookPrice(book);
                     currentBook.Rate = _attr.GetBookRating(book);
+                    currentBook.BookURL = _attr.GetBookURL(book);
+                    currentBook.Description = _attr.GetBookDescription(currentBook.BookURL);
 
                     if (!booksInCat.Contains(currentBook))
                     {
