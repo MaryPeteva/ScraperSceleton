@@ -1,0 +1,2 @@
+<h1>Book Scraper Tool</h1>
+<p>A tool to collect the book data asynchronously from a bookstore website, then to sort this data based on given keys, dedicated to http://books.toscrape.com/. Used and developped technologies are aplicable for scrapping most conteporary websites with certain updates</p>
